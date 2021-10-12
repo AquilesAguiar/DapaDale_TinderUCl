@@ -6,9 +6,7 @@ namespace DapaDale_TinderUCl
     {
         static void Main(string[] args)
         {   
-            apiCep cep = new apiCep("29164370");
-            cep.retornaLocalidade();
-            Console.WriteLine(cep.retornaLocalidade().cep);
+            
         }
     }
 }

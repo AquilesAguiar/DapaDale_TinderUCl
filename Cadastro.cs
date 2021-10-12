@@ -38,7 +38,7 @@ namespace DapaDale_TinderUCl
                 line = sr.ReadLine();
                 while (line != null)
                 {   
-                    dadosIntereses = line.Split('-');
+                    dadosIntereses = line.Split(',');
                     if (int.Parse(dadosIntereses[0]) == index)
                     {   
                         interessesUser.Add(new interesses(int.Parse(dadosIntereses[0]),dadosIntereses[1]));

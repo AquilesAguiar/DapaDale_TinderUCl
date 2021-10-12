@@ -7,22 +7,26 @@ namespace DapaDale_TinderUCl
         public string Nome{get;protected set;}
         public string Rg{get;protected set;}
         public int Celular{get;protected set;}
-        public int Cep{get;protected set;}
-        private int Senha{get;set;}
-        public Date DataNasc{get;protected set;}
+        public string Cep{get;protected set;}
+        private string Senha{get;set;}
+        public string DataNasc{get;protected set;}
         public string Foto{get;protected set;}
-        //public bool Verificado{get;protected set;}
-        List<interesses> interessesUser = new List<interesses>();
+        public bool Verificado{get;protected set;}
+        // List<interesses> interessesUser = new List<interesses>();
 
-        public Cadastro(string nome,string rg = "",int cel, int cep, int senha, Date data_nasc, string foto = ""){
+        public Cadastro(string nome,int cel, string cep, string senha, string data_nasc, bool verificado ,string rg = "",string foto = ""){
             Nome = nome;
             Celular = cel;
-            apiCep viaCep = new apiCep();
-            cep.retornaLocalidade();
+            apiCep viaCep = new apiCep(cep);
+            viaCep.retornaLocalidade();
+            Rg = rg;
             Senha = senha;
             DataNasc = data_nasc;
             Foto = foto;
+            Verificado = verificado;
         }
+
+        public abstract bool AtualizaPropriedade(int escolha, string valor);
 
     }
 }

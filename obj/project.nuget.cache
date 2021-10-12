@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "odCu3enTO6XHEDpsuyDo5dOJd99wBxFtRtXvJtuUVFZ5IR6W5XTnPx327OkjJLZ5uYLgTxPFkbfQPgmz/bG5QA==",
+  "dgSpecHash": "dwvQtU4QWt8seXdXtXguKLF8W8CkZqWwXjxAxDLF27jbDcoVC2nTNtOjSpp3Rep4qcwfhHHS4gi8s/SEs3qsMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj",
+  "projectFilePath": "C:\\Users\\aquil\\OneDrive\\Documentos\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\bielp\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\aquil\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -17,9 +17,19 @@ namespace DapaDale_TinderUCl
             DateTime dataAtual = DateTime.Today;
 
             TimeSpan Intervalo = dataAtual - data;
-            
+                    
             TimeSpan Valor = Intervalo/365;
 
+            string valorString = Valor.ToString();
+
+            string[] listValor = valorString.Split('.');
+            // Console.WriteLine(listValor[0]);
+
+            if(listValor[0] >= 18){
+                 return true;
+            }
+
+            return true;
 
         }
 

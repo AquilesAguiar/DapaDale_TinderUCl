@@ -1,3 +1,5 @@
+using System;
+
 namespace DapaDale_TinderUCl
 {
     public class Usuario:Cadastro, IVerificado
@@ -25,11 +27,11 @@ namespace DapaDale_TinderUCl
             string[] listValor = valorString.Split('.');
             // Console.WriteLine(listValor[0]);
 
-            if(listValor[0] >= 18){
-                 return true;
+            if (int.Parse(listValor[0]) > 18){
+                return true;
             }
 
-            return true;
+            return false;
 
         }
 

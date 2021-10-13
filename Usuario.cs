@@ -66,6 +66,5 @@ namespace DapaDale_TinderUCl
                     return false;
             }
         }
-
     }
 }

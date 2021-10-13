@@ -7,12 +7,12 @@ namespace DapaDale_TinderUCl
 {
     public abstract class Cadastro{
         public string Nome{get;protected set;}
-        public string Rg{get;protected set;}
+        public string Rg{get; protected set;}
         public int Celular{get;protected set;}
         public string Cep{get;protected set;}
-        private string Senha{get;set;}
+        public string Senha{get; protected set;}
         public string DataNasc{get;protected set;}
-        public string Foto{get;protected set;}
+        public string Foto{get; protected set;}
         public bool Verificado{get;protected set;}
         public ResponseViaCep Endereco;
         List<interesses> interessesUser = new List<interesses>();
@@ -34,7 +34,7 @@ namespace DapaDale_TinderUCl
             string[] dadosIntereses;
             try
             {
-                StreamReader sr = new StreamReader("database\\interesses.txt");
+                StreamReader sr = new StreamReader("database\\interesses.csv");
                 line = sr.ReadLine();
                 while (line != null)
                 {   
@@ -51,11 +51,11 @@ namespace DapaDale_TinderUCl
             }
             catch(Exception e)
             {
-                Console.WriteLine("Exception: " + e.Message);
+                Console.WriteLine("Erro: " + e.Message);
             }
             finally
             {
-                Console.WriteLine("Executing finally block.");
+                Console.WriteLine("Interesses adicionados");
             }
         }
 

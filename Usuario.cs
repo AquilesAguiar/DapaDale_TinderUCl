@@ -13,7 +13,14 @@ namespace DapaDale_TinderUCl
         }
 
         public bool VerificaData(){
+            DateTime data = Convert.ToDateTime(DataNasc);
+            DateTime dataAtual = DateTime.Today;
+
+            TimeSpan Intervalo = dataAtual - data;
             
+            TimeSpan Valor = Intervalo/365;
+
+
         }
 
         public override bool AtualizaPropriedade(int escolha, string valor){

@@ -14,6 +14,10 @@ namespace DapaDale_TinderUCl
             return Verificado;
         }
 
+        public bool VerificaData(){
+            
+        }
+
 
     }
 }

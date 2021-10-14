@@ -57,6 +57,7 @@ namespace DapaDale_TinderUCl
             // Salvando os interesses
             int cont = 0;
             while(cont<4){
+                Console.WriteLine("\n");
                 Console.WriteLine("Insira o código do interesse: ");
                 string valor = Console.ReadLine();
                 try

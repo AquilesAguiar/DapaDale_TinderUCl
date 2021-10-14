@@ -1,0 +1,54 @@
+{
+  "Nome": "Gabriel",
+  "Descricao": "Gosto muito de jogar",
+  "Celular": "99999",
+  "Cep": "29167019",
+  "Senha": "1234",
+  "DataNasc": "05/10/2001",
+  "Verificado": true,
+  "Rg": "1818181818",
+  "Foto": "a",
+  "interessesUser": [
+    "Games",
+    "Filme",
+    "Esportes",
+    "Futebol"
+  ]
+}
+;
+{
+  "Nome": "Pedro",
+  "Descricao": "Jogo Lol",
+  "Celular": "99999",
+  "Cep": "29167018",
+  "Senha": "123",
+  "DataNasc": "05/10/2001",
+  "Verificado": true,
+  "Rg": "2222",
+  "Foto": "a",
+  "interessesUser": [
+    "Filme",
+    "Drinks",
+    "Viajar",
+    "Esportes"
+  ]
+}
+;
+{
+  "Nome": "Ronald",
+  "Descricao": "12",
+  "Celular": "11111111111",
+  "Cep": "29167016",
+  "Senha": "22",
+  "DataNasc": "05/10/2000",
+  "Verificado": true,
+  "Rg": "12",
+  "Foto": "a",
+  "interessesUser": [
+    "Filme",
+    "Esportes",
+    "Futebol",
+    "Drinks"
+  ]
+}
+;

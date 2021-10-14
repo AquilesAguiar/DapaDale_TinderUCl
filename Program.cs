@@ -41,6 +41,7 @@ namespace DapaDale_TinderUCl
                         Console.Write("Link da Foto >> ");
                         string foto = Console.ReadLine();
                         
+                        Console.WriteLine("\n\n");
                         List<string> listaInteresses = new List<string>();
 
                         Usuario user = new Usuario(nome, descricao, rg, cel,  cep,  senha,  dataNas, foto, false,Cadastro.escolherInteresses(listaInteresses));
@@ -95,7 +96,9 @@ namespace DapaDale_TinderUCl
                         Console.ReadKey();
                         Console.Clear();
                         Environment.Exit(0);
+                        
                         break;
+
                     
                     default:
                         //Comando Inválido 

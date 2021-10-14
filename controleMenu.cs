@@ -2,15 +2,18 @@ using System;
 using System.IO;
 
 namespace DapaDale_TinderUCl
-{
+{   
+    [Serializable]
     public class controleMenus
     {
         public static string bemVindo(){
             return @"___________________________________________________________
-                                                Tinder UCL <3
+                                          ❤ Tinder UCL ❤
                      ___________________________________________________________
 
-
+                     1 - Cadastrar novo usuario
+                     2 - Logar com usuario  
+                     3 - Sair  
             ";
         }
 
@@ -42,5 +45,19 @@ namespace DapaDale_TinderUCl
             }
             
         }
+
+        string msgComandos = @"========================================================================
+                                1 - Ver perfil
+                                2 - Ver Interesses
+                               ========================================================================
+        
+        ";      
+        public static void comandos(){
+            while(true){
+                            
+            }
+        }
+        
+        
     }
 }

@@ -1,9 +1,10 @@
 using System;
-
+using System.Runtime.Serialization;
 namespace DapaDale_TinderUCl
 {
+    [Serializable]
     public class Usuario:Cadastro, IVerificado
-    {
+    {   
         public Usuario(string nome,int cel, string cep, string senha, string data_nasc, bool verificado = false, string rg = "",string foto = "" ):base(nome, cel, cep, senha, data_nasc, verificado, rg, foto){}
 
         public bool isVerificado(){

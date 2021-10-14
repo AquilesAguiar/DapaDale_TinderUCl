@@ -39,15 +39,15 @@ namespace DapaDale_TinderUCl
                         
                         
                         Usuario user = new Usuario(nome,cel,cep,senha,dataNas,false,rg,foto);
+
+                        
+
                         user.isVerificado();
                         if (user.VerificaData()){
                             //Escreve no TXT
                             try
                             {
-                                StreamWriter sw = File.AppendText("C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\database\\Usuarios.csv");
-                                
-                                sw.WriteLine(user.Nome + "," + user.Celular + "," + user.Endereco.cep + "," + user.Endereco.logradouro + "," + user.Endereco.bairro + "," + user.Endereco.localidade + "," + user.Endereco.uf + "," + user.Senha + "," + user.DataNasc + "," + user.Rg + "," + user.Foto + "," + user.Verificado);
-                                sw.Close();
+                                guardarUser.serializar(user);
                             }
                             catch(Exception e)
                             {

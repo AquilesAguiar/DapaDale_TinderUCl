@@ -1,5 +1,7 @@
+using System;
 namespace DapaDale_TinderUCl
 {
+    [Serializable]
     public class ResponseViaCep
     {
         public string cep { get; set; }

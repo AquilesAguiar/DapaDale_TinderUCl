@@ -1,7 +1,8 @@
 using System;
 using System.IO;
 namespace DapaDale_TinderUCl
-{
+{   
+    [Serializable]
     public class interesses
     {
         public int Id{ get;protected set;}

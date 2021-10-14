@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 
 namespace DapaDale_TinderUCl
-{
+{   
+    [Serializable]
     public abstract class Cadastro{
         public string Nome{get;protected set;}
         public string Rg{get; protected set;}

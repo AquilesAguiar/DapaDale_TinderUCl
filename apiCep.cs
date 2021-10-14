@@ -5,7 +5,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace DapaDale_TinderUCl
-{
+{   
+    [Serializable]
     public class apiCep
     {   
         string Cep;

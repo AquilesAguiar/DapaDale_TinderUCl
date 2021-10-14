@@ -52,3 +52,21 @@
   ]
 }
 ;
+{
+  "Nome": "Oi",
+  "Descricao": "Teste",
+  "Celular": "0328828482",
+  "Cep": "29164370",
+  "Senha": "1234",
+  "DataNasc": "08/02/2002",
+  "Verificado": true,
+  "Rg": "121341",
+  "Foto": "oi",
+  "interessesUser": [
+    "Games",
+    "Drinks",
+    "Viajar",
+    "Dan\u00E7ar"
+  ]
+}
+;

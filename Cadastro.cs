@@ -77,9 +77,6 @@ namespace DapaDale_TinderUCl
                                 Console.WriteLine("Interesse já esta adicionado tente denovo");
                             }
                         }
-                        else{
-                            Console.WriteLine("Esse interesse não existe tente denovo");
-                        }
                         line = sr2.ReadLine();
                     }
                     sr2.Close();

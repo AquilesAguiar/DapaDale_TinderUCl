@@ -5,7 +5,7 @@ namespace DapaDale_TinderUCl
     [Serializable]
     public class Usuario:Cadastro, IVerificado
     {   
-        public Usuario(string nome,int cel, string cep, string senha, string data_nasc, bool verificado = false, string rg = "",string foto = "" ):base(nome, cel, cep, senha, data_nasc, verificado, rg, foto){}
+        public Usuario(string Nome,string Rg,string Celular, string Cep, string Senha, string DataNasc,string Foto, bool Verificado):base(  Nome, Rg, Celular,  Cep,  Senha,  DataNasc, Foto,  Verificado){}
 
         public bool isVerificado(){
             if(Rg != "" && Foto != ""){
@@ -45,7 +45,7 @@ namespace DapaDale_TinderUCl
                     return true;
                 // Celular
                 case 2:
-                    Celular = int.Parse(valor);
+                    Celular = valor;
                     return true;
                 // Cep
                 case 3:

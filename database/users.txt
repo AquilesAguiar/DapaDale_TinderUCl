@@ -1,0 +1,22 @@
+{
+  "Nome": "Aquiles Silva Aguiar",
+  "Celular": "234555533",
+  "Cep": "29164370",
+  "Senha": "1234",
+  "DataNasc": "08/02/2002",
+  "Verificado": true,
+  "Rg": "31442525",
+  "Foto": "twtwtw"
+}
+;
+{
+  "Nome": "Bruno",
+  "Celular": "234555533",
+  "Cep": "29164370",
+  "Senha": "1234",
+  "DataNasc": "08/02/2002",
+  "Verificado": true,
+  "Rg": "31442525",
+  "Foto": "twtwtw"
+}
+;

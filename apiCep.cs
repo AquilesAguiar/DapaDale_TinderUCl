@@ -1,8 +1,7 @@
 using System;
 using System.IO;
 using System.Net;
-using Newtonsoft.Json; 
-using Newtonsoft.Json.Serialization;
+using System.Text.Json;
 
 namespace DapaDale_TinderUCl
 {   
@@ -21,11 +20,7 @@ namespace DapaDale_TinderUCl
             var cliente = new WebClient();
             var text = cliente.DownloadString("https://viacep.com.br/ws/"+Cep+"/json/");
 
-            var settings = new JsonSerializerSettings
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-            };
-            ResponseViaCep viacep = JsonConvert.DeserializeObject<ResponseViaCep>(text);
+            ResponseViaCep viacep = JsonSerializer.Deserialize<ResponseViaCep>(text);
 
             return viacep;
         }

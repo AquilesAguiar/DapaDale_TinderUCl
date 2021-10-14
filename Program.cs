@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
 
 namespace DapaDale_TinderUCl
 {
@@ -9,12 +10,12 @@ namespace DapaDale_TinderUCl
         {   
             
             while (true){
-                Console.Write("Digite 1 para Cadastrar-se e 2 para Logar! >> ");
-                int sentinela = int.Parse(Console.ReadLine());
+                controleMenus.bemVindo();
+                string sentinela = Console.ReadLine();
 
                 switch(sentinela){
 
-                    case 1:
+                    case "1":
                         //Cadastrar-se
                         Console.Write("Nome >> ");
                         string nome = Console.ReadLine();
@@ -23,7 +24,7 @@ namespace DapaDale_TinderUCl
                         string dataNas = Console.ReadLine();
 
                         Console.Write("Celular >> ");
-                        int cel = int.Parse(Console.ReadLine());
+                        string cel = Console.ReadLine();
 
                         Console.Write("Cep >> ");
                         string cep = Console.ReadLine();
@@ -37,17 +38,15 @@ namespace DapaDale_TinderUCl
                         Console.Write("Link da Foto >> ");
                         string foto = Console.ReadLine();
                         
-                        
-                        Usuario user = new Usuario(nome,cel,cep,senha,dataNas,false,rg,foto);
+                        Usuario user = new Usuario(nome, rg, cel,  cep,  senha,  dataNas, foto, false);
 
-                        
 
                         user.isVerificado();
                         if (user.VerificaData()){
                             //Escreve no TXT
                             try
                             {
-                                guardarUser.serializar(user);
+                                controleUsers.serializar(user);
                             }
                             catch(Exception e)
                             {
@@ -62,22 +61,25 @@ namespace DapaDale_TinderUCl
                         Console.WriteLine("Usuario menor de 18 anos !!");
                         break;
 
-                    case 2:
+                    case "2":
                         //Logar
                         Console.Write("Usuario >> ");
                         string usu = Console.ReadLine();
 
                         Console.Write("Senha >> ");
                         string password = Console.ReadLine();
-
-                        if(controleMenus.Logar(usu,password)){
+                        List<Usuario> usuariosBanco = controleUsers.deserializar();
+                        if(controleUsers.Logar(usu,password,usuariosBanco)){
                             Console.WriteLine("Entrou!");
                         }
                         break;
-                    case 3:
+                    case "3":
                         //Sair
                         Console.WriteLine("Saindo....");
                         Environment.Exit(0);
+                        break;
+                    
+                    default:
                         break;
                 }
 

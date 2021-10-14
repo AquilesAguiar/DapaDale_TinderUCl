@@ -8,19 +8,20 @@ namespace DapaDale_TinderUCl
     [Serializable]
     public abstract class Cadastro{
         public string Nome{get;protected set;}
-        public string Rg{get; protected set;}
-        public int Celular{get;protected set;}
+        public string Celular{get;protected set;}
         public string Cep{get;protected set;}
         public string Senha{get; protected set;}
         public string DataNasc{get;protected set;}
-        public string Foto{get; protected set;}
         public bool Verificado{get;protected set;}
+        public string Rg{get; protected set;}
+        public string Foto{get; protected set;}
         public ResponseViaCep Endereco;
         List<interesses> interessesUser = new List<interesses>();
 
-        public Cadastro(string nome,int cel, string cep, string senha, string data_nasc, bool verificado ,string rg ,string foto){
+        public Cadastro(string nome,string rg,string cel, string cep, string senha, string data_nasc,string foto, bool verificado){
             Nome = nome;
             Celular = cel;
+            Cep = cep;
             apiCep viaCep = new apiCep(cep);
             Endereco = viaCep.retornaLocalidade();
             Rg = rg;

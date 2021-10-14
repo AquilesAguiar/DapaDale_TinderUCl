@@ -1,11 +1,12 @@
 using System;
 using System.Runtime.Serialization;
+using System.Collections.Generic;
 namespace DapaDale_TinderUCl
 {
     [Serializable]
     public class Usuario:Cadastro, IVerificado
     {   
-        public Usuario(string Nome,string Rg,string Celular, string Cep, string Senha, string DataNasc,string Foto, bool Verificado):base(  Nome, Rg, Celular,  Cep,  Senha,  DataNasc, Foto,  Verificado){}
+        public Usuario(string Nome,string descricao,string Rg,string Celular, string Cep, string Senha, string DataNasc,string Foto, bool Verificado,List<String> interessesUser):base(  Nome, descricao,Rg, Celular,  Cep,  Senha,  DataNasc, Foto,  Verificado,interessesUser){}
 
         public bool isVerificado(){
             if(Rg != "" && Foto != ""){
@@ -62,6 +63,10 @@ namespace DapaDale_TinderUCl
                 //Foto    
                 case 6:
                     Foto = valor;
+                    return true;
+                //Descricao    
+                case 7:
+                    Descricao = valor;
                     return true;
                 default:
                     return false;

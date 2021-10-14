@@ -49,6 +49,7 @@ namespace DapaDale_TinderUCl
                     if (user.Nome == Usu && user.Senha == Senha)
                     {   
                         return true;
+
                     }
                 }
                 Console.WriteLine("Não Logou");

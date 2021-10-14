@@ -40,9 +40,14 @@ namespace DapaDale_TinderUCl
 
                         Console.Write("Link da Foto >> ");
                         string foto = Console.ReadLine();
-                        Usuario user = new Usuario(nome, descricao, rg, cel,  cep,  senha,  dataNas, foto, false,interesses.controleInteresse());
-                        Console.WriteLine(user.interessesUser[0]);
+                        
+                        List<string> listaInteresses = new List<string>();
+
+                        Usuario user = new Usuario(nome, descricao, rg, cel,  cep,  senha,  dataNas, foto, false,Cadastro.escolherInteresses(listaInteresses));
+                        
+                        // Verifica usuario
                         user.isVerificado();
+
                         if (user.VerificaData()){
                             //Serializa a classe
                             try
@@ -79,7 +84,6 @@ namespace DapaDale_TinderUCl
                         List<Usuario> usuariosBanco = controleUsers.deserializar();
                         if(controleUsers.Logar(usu,password,usuariosBanco)){
                             Console.WriteLine("Entrou!");
-                            Console.WriteLine(usuariosBanco[3].interessesUser.Count);
                             Console.ReadKey();
                             Console.Clear();
                             controleMenus.comandos(usu,password,usuariosBanco);

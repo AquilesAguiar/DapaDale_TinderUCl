@@ -23,10 +23,9 @@ ________________________________________________________________________________
             while(true){
                 Console.WriteLine(@"___________________________________________________________________________________________________________________________________________
                                 1 - Dar likes
-                                2 - Ver Matchs
-                                3 - Ver perfil
-                                4 - Ver Interesses
-                                5 - Sair
+                                2 - Ver perfil
+                                3 - Ver Interesses
+                                4 - Sair
 ___________________________________________________________________________________________________________________________________________
         
         ");
@@ -37,15 +36,15 @@ ________________________________________________________________________________
 
                 switch(sentinela){
                     case "1":
+                        darLikes(Usu,Senha,Usuarios);
                         break;
                     case "2":
-                        break;
-                    case "3":
                         verPerfil(Usu,Senha,Usuarios);
                         break;
-                    case "4":
+                    case "3":
+                        verInteresses(Usu,Senha,Usuarios);
                         break;
-                    case "5":
+                    case "4":
                         //Sair 
                         Console.WriteLine("Saindo....");
                         Console.ReadKey();
@@ -78,6 +77,28 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________________________________________________________");
                     break;
                 }
+            }
+        }
+
+        public static void verInteresses(string Usu, string Senha,List<Usuario> Usuarios){
+           
+            foreach (Usuario user in Usuarios){
+                if (user.Nome == Usu && user.Senha == Senha)
+                {   
+                    Console.WriteLine(@$"___________________________________________________________________________________________________________________________________________
+                                1 - {user.interessesUser[0]}
+                                2 - {user.interessesUser[1]}
+                                3 - {user.interessesUser[2]}
+                                4 - {user.interessesUser[3]}
+___________________________________________________________________________________________________________________________________________");
+                    break;
+                }
+            }
+        }
+
+        public static void darLikes(string Usu, string Senha,List<Usuario> Usuarios){
+            while(true){
+                break;
             }
         }
         

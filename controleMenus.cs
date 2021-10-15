@@ -36,6 +36,7 @@ ________________________________________________________________________________
 
                 switch(sentinela){
                     case "1":
+                        Console.WriteLine("Teste");
                         darLikes(Usu,Senha,Usuarios);
                         break;
                     case "2":
@@ -164,23 +165,27 @@ ________________________________________________________________________________
                 y2 = kvp.Value.Item2;
                 
                 var distance = Math.Sqrt((Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)));
+
                 distanciaCalc.Add(kvp.Key,Math.Round(distance,2));
             }
-            var sortedDict = from entry in distanciaCalc orderby entry.Value ascending select entry;
-            
+            var myList = distanciaCalc.ToList();
+
+            myList.Sort((pair1, pair2) => pair1.Value.CompareTo(pair2.Value));
+        
             distanciaCalc.Clear();
 
-            foreach( KeyValuePair<Usuario, double> kvp in sortedDict )
+            foreach( var value in myList )
             {   
-                distanciaCalc.Add(kvp.Key, kvp.Value);
+                distanciaCalc.Add(value.Key,value.Value);
             }
             return distanciaCalc;
         }
         public static void darLikes(string Usu, string Senha,List<Usuario> Usuarios){
             Dictionary<Usuario, double> recomendacoes = calcRecomendacao(Usu,Senha,Usuarios);
             foreach( KeyValuePair<Usuario, double> kvp in recomendacoes){
-
+                Console.Clear();
                 Console.WriteLine(@$"___________________________________________________________________________________________________________________________________________
+                                Perfil
                         Foto:{kvp.Key.Foto}
                         Nome:{kvp.Key.Nome}
                         Descriçao:{kvp.Key.Descricao}

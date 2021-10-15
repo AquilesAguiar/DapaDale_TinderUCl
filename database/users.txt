@@ -1,126 +1,72 @@
 {
   "Nome": "Aquiles",
-  "Descricao": "Louco por Crack",
-  "Celular": "999999",
-  "Cep": "29167019",
-  "Senha": "111",
-  "DataNasc": "05 10 2000",
+  "Descricao": "teste",
+  "Celular": "27988125213",
+  "Cep": "29164370",
+  "Senha": "123",
+  "DataNasc": "08/02/2002",
   "Verificado": true,
-  "Rg": "11111",
-  "Foto": "a",
+  "Rg": "12131414",
+  "Foto": "teste",
   "interessesUser": [
-    "Games",
+    "Drinks",
     "Esportes",
-    "Futebol",
-    "Games"
+    "Sair com os Amigos",
+    "Dancar"
   ]
 }
 ;
 {
   "Nome": "Gabriel",
-  "Descricao": "Gosto muito de jogar",
-  "Celular": "99999",
+  "Descricao": "teste",
+  "Celular": "201983435",
   "Cep": "29167019",
-  "Senha": "1234",
-  "DataNasc": "05/10/2001",
-  "Verificado": true,
-  "Rg": "1818181818",
-  "Foto": "a",
-  "interessesUser": [
-    "Games",
-    "Filme",
-    "Esportes",
-    "Futebol"
-  ]
-}
-;
-{
-  "Nome": "Pedro",
-  "Descricao": "Jogo Lol",
-  "Celular": "99999",
-  "Cep": "29167018",
   "Senha": "123",
-  "DataNasc": "05/10/2001",
+  "DataNasc": "01/02/2000",
   "Verificado": true,
-  "Rg": "2222",
-  "Foto": "a",
+  "Rg": "12143141",
+  "Foto": "teste",
   "interessesUser": [
-    "Filme",
     "Drinks",
-    "Viajar",
-    "Esportes"
-  ]
-}
-;
-{
-  "Nome": "Ronald",
-  "Descricao": "12",
-  "Celular": "11111111111",
-  "Cep": "29167016",
-  "Senha": "22",
-  "DataNasc": "05/10/2000",
-  "Verificado": true,
-  "Rg": "12",
-  "Foto": "a",
-  "interessesUser": [
-    "Filme",
-    "Esportes",
+    "Serie",
     "Futebol",
-    "Drinks"
+    "Dancar"
   ]
 }
 ;
 {
-  "Nome": "Oi",
+  "Nome": "Brenin",
   "Descricao": "Teste",
-  "Celular": "0328828482",
+  "Celular": "1213414",
   "Cep": "29164370",
-  "Senha": "1234",
-  "DataNasc": "08/02/2002",
+  "Senha": "123",
+  "DataNasc": "27/02/2002",
   "Verificado": true,
-  "Rg": "121341",
-  "Foto": "oi",
+  "Rg": "29428477",
+  "Foto": "uiai",
   "interessesUser": [
-    "Games",
-    "Drinks",
+    "Desenhos",
+    "Animes",
     "Viajar",
-    "Dan\u00E7ar"
-  ]
-}
-;
-{
-  "Nome": "Benguinha",
-  "Descricao": "hola amigos",
-  "Celular": "99999",
-  "Cep": "29167025",
-  "Senha": "234",
-  "DataNasc": "10 02 2001",
-  "Verificado": true,
-  "Rg": "123",
-  "Foto": "s",
-  "interessesUser": [
-    "Games",
-    "Games",
-    "Games",
     "Games"
   ]
 }
 ;
 {
-  "Nome": "penis",
-  "Descricao": "piru",
-  "Celular": "99999",
-  "Cep": "29167019",
-  "Senha": "132",
-  "DataNasc": "02 02 2002",
+  "Nome": "Oi",
+  "Descricao": "teste",
+  "Celular": "222424",
+  "Cep": "29164370",
+  "Senha": "123",
+  "DataNasc": "08/02/2002",
   "Verificado": true,
-  "Rg": "123",
-  "Foto": "s",
+  "Rg": "1134141",
+  "Foto": "gai",
   "interessesUser": [
-    "Games",
-    "Filme",
-    "Esportes",
-    "Drinks"
+    "Sair com os Amigos",
+    "Drinks",
+    "Dancar",
+    "Games"
   ]
 }
 ;

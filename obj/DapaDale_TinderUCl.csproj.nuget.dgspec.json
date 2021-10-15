@@ -1,27 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj": {}
+    "C:\\Users\\aaguiar\\Documents\\faculdade\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj": {
+    "C:\\Users\\aaguiar\\Documents\\faculdade\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj",
+        "projectUniqueName": "C:\\Users\\aaguiar\\Documents\\faculdade\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj",
         "projectName": "DapaDale_TinderUCl",
-        "projectPath": "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj",
-        "packagesPath": "C:\\Users\\bielp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\obj\\",
+        "projectPath": "C:\\Users\\aaguiar\\Documents\\faculdade\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj",
+        "packagesPath": "C:\\Users\\aaguiar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aaguiar\\Documents\\faculdade\\DapaDale_TinderUCl\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bielp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\aaguiar\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",

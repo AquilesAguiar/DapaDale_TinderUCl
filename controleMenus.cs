@@ -173,24 +173,29 @@ ________________________________________________________________________________
                 // y2 = 10d;
                 // var distance = Math.Sqrt((Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)));
                 // Console.WriteLine(distance);
-//                 foreach(Usuario user in Usuarios){
-//                     if (user.Nome != Usu && user.Senha != Senha){
+                foreach(Usuario user in Usuarios){
+                    if (user.Nome != Usu && user.Senha != Senha){
 
-//                         Console.WriteLine(@$"___________________________________________________________________________________________________________________________________________
-//                                 Foto:{user.Foto}
-//                                 Nome:{user.Nome}
-//                                 Descriçao:{user.Descricao}
-//                                 Data de Nascimento:{user.DataNasc}
-//                                 Rua:{user.Endereco.logradouro}
-//                                 Bairro:{user.Endereco.bairro}
-//                                 Estado:{user.Endereco.uf}
-// ___________________________________________________________________________________________________________________________________________");
-//                         Console.WriteLine("\n\n");
+                        Console.WriteLine(@$"___________________________________________________________________________________________________________________________________________
+                                Foto:{user.Foto}
+                                Nome:{user.Nome}
+                                Descriçao:{user.Descricao}
+                                Data de Nascimento:{user.DataNasc}
+                                Rua:{user.Endereco.logradouro}
+                                Bairro:{user.Endereco.bairro}
+                                Estado:{user.Endereco.uf}
+___________________________________________________________________________________________________________________________________________");
+                        Console.WriteLine("\n\n");
 
-//                         Console.WriteLine("Like(Seta para direita) e Dislike(Seta para esquerda)");
-//                         if()
-//                     }
-//                 }
+                        Console.WriteLine("Like(Pressione L) || Dislike(Pressione D)");
+                        ConsoleKeyInfo situacao = Console.ReadKey();
+                        if(situacao.KeyChar == 'l'){
+                            Console.WriteLine("Gostou!");
+                        }else if( situacao.KeyChar == 'd'){
+                            Console.WriteLine("Não Gostou!");
+                        }
+                    }
+                }
                     
         
 

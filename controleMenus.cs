@@ -101,10 +101,10 @@ ________________________________________________________________________________
             }
         }
 
-        public static Dictionary<Tuple<string,string>, Tuple<int,int>> recomendacao(string Usu, string Senha,List<Usuario> Usuarios){
+        public static Dictionary<Usuario, Tuple<int,int>> recomendacao(string Usu, string Senha,List<Usuario> Usuarios){
             string rua = "",bairro = "",estado = "";
             string[] interesses = new string[4];
-            Dictionary<Tuple<string,string>, Tuple<int,int>> recomendacoesUsers = new Dictionary<Tuple<string,string>, Tuple<int,int>>();
+            Dictionary<Usuario, Tuple<int,int>> recomendacoesUsers = new Dictionary<Usuario, Tuple<int,int>>();
             foreach (Usuario user in Usuarios)
             {
                 
@@ -144,17 +144,17 @@ ________________________________________________________________________________
                             cont2++;
                         };
                     }
-                    recomendacoesUsers.Add(new Tuple<string, string>(user2.Nome,user2.Senha), new Tuple<int, int>(cont,cont2));
+                    recomendacoesUsers.Add(user2, new Tuple<int, int>(cont,cont2));
                 }
             }
             return recomendacoesUsers;
         }
 
-        public static Dictionary<Tuple<string,string>, double> calcRecomendacao(string Usu, string Senha,List<Usuario> Usuarios){
-            Dictionary<Tuple<string,string>,Tuple<int,int>> recomendacoes = recomendacao(Usu,Senha,Usuarios); 
-            Dictionary<Tuple<string,string>, double> distanciaCalc = new Dictionary<Tuple<string,string>, double>();
+        public static Dictionary<Usuario, double> calcRecomendacao(string Usu, string Senha,List<Usuario> Usuarios){
+            Dictionary<Usuario,Tuple<int,int>> recomendacoes = recomendacao(Usu,Senha,Usuarios); 
+            Dictionary<Usuario, double> distanciaCalc = new Dictionary<Usuario, double>();
             
-            foreach( KeyValuePair<Tuple<string,string>, Tuple<int,int>> kvp in recomendacoes )
+            foreach( KeyValuePair<Usuario, Tuple<int,int>> kvp in recomendacoes )
             {
 
                 int x1, x2, y1, y2;
@@ -164,48 +164,47 @@ ________________________________________________________________________________
                 y2 = kvp.Value.Item2;
                 
                 var distance = Math.Sqrt((Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)));
-                distanciaCalc.Add(new Tuple<string, string>(kvp.Key.Item1,kvp.Key.Item2),Math.Round(distance,2));
+                distanciaCalc.Add(kvp.Key,Math.Round(distance,2));
             }
             var sortedDict = from entry in distanciaCalc orderby entry.Value ascending select entry;
             
             distanciaCalc.Clear();
 
-            foreach( KeyValuePair<Tuple<string,string>, double> kvp in sortedDict )
+            foreach( KeyValuePair<Usuario, double> kvp in sortedDict )
             {   
-                distanciaCalc.Add(new Tuple<string,string>(kvp.Key.Item1,kvp.Key.Item2), kvp.Value);
+                distanciaCalc.Add(kvp.Key, kvp.Value);
             }
             return distanciaCalc;
         }
         public static void darLikes(string Usu, string Senha,List<Usuario> Usuarios){
-            Dictionary<Tuple<string,string>, double> recomendacoes = calcRecomendacao(Usu,Senha,Usuarios);
-            foreach( KeyValuePair<Tuple<string,string>, double> kvp in recomendacoes){
-//                 if (user.Nome != Usu && user.Senha != Senha){
+            Dictionary<Usuario, double> recomendacoes = calcRecomendacao(Usu,Senha,Usuarios);
+            foreach( KeyValuePair<Usuario, double> kvp in recomendacoes){
 
-//                     Console.WriteLine(@$"___________________________________________________________________________________________________________________________________________
-//                             Foto:{user.Foto}
-//                             Nome:{user.Nome}
-//                             Descriçao:{user.Descricao}
-//                             Data de Nascimento:{user.DataNasc}
-//                             Rua:{user.Endereco.logradouro}
-//                             Bairro:{user.Endereco.bairro}
-//                             Estado:{user.Endereco.uf}
-// ___________________________________________________________________________________________________________________________________________
-//                                     Interessses
-//                             1 - {user.interessesUser[0]}
-//                             2 - {user.interessesUser[1]}
-//                             3 - {user.interessesUser[2]}
-//                             4 - {user.interessesUser[3]}
-// ___________________________________________________________________________________________________________________________________________");
-//                     Console.WriteLine("\n\n");
+                Console.WriteLine(@$"___________________________________________________________________________________________________________________________________________
+                        Foto:{kvp.Key.Foto}
+                        Nome:{kvp.Key.Nome}
+                        Descriçao:{kvp.Key.Descricao}
+                        Data de Nascimento:{kvp.Key.DataNasc}
+                        Rua:{kvp.Key.Endereco.logradouro}
+                        Bairro:{kvp.Key.Endereco.bairro}
+                        Estado:{kvp.Key.Endereco.uf}
+___________________________________________________________________________________________________________________________________________
+                                Interessses
+                        1 - {kvp.Key.interessesUser[0]}
+                        2 - {kvp.Key.interessesUser[1]}
+                        3 - {kvp.Key.interessesUser[2]}
+                        4 - {kvp.Key.interessesUser[3]}
+___________________________________________________________________________________________________________________________________________");
+                Console.WriteLine("\n\n");
 
-//                     Console.WriteLine("Dislike(Pressione A) || Like(Pressione D)");
-//                     ConsoleKeyInfo situacao = Console.ReadKey();
-//                     if(situacao.KeyChar == 'd'){
-//                         Console.WriteLine("Gostou!");
-//                     }else if( situacao.KeyChar == 'a'){
-//                         Console.WriteLine("Não Gostou!");
-//                     }
-//                 }
+                Console.WriteLine("Dislike(Pressione A) || Like(Pressione D)");
+                ConsoleKeyInfo situacao = Console.ReadKey();
+                if(situacao.KeyChar == 'd'){
+                    Console.WriteLine("Gostou!");
+                }else if( situacao.KeyChar == 'a'){
+                    Console.WriteLine("Não Gostou!");
+                }
+                
             }
         }
         

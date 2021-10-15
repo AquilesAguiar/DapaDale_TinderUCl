@@ -10,6 +10,7 @@ namespace DapaDale_TinderUCl
         {   
             
             while (true){
+                
                 controleMenus.bemVindo();
                 string sentinela = Console.ReadLine();
 
@@ -85,6 +86,7 @@ namespace DapaDale_TinderUCl
                         List<Usuario> usuariosBanco = controleUsers.deserializar();
                         if(controleUsers.Logar(usu,password,usuariosBanco)){
                             Console.WriteLine("Entrou!");
+                            controleMenus.darLikes(usu,password,usuariosBanco);
                             Console.ReadKey();
                             Console.Clear();
                             controleMenus.comandos(usu,password,usuariosBanco);

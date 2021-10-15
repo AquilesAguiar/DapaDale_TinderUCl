@@ -68,7 +68,7 @@ namespace DapaDale_TinderUCl
                     {   
                         controle = line.Split(",");
                         if(controle[0] == valor){
-                            if(!listaInteresses.Contains("valor")){
+                            if(!listaInteresses.Contains(controle[1])){
                                 Console.WriteLine("Interesse adicionado");
                                 listaInteresses = addInteresses(controle[1],listaInteresses);
                                 cont++;

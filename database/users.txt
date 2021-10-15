@@ -1,4 +1,22 @@
 {
+  "Nome": "Aquiles",
+  "Descricao": "Louco por Crack",
+  "Celular": "999999",
+  "Cep": "29167019",
+  "Senha": "111",
+  "DataNasc": "05 10 2000",
+  "Verificado": true,
+  "Rg": "11111",
+  "Foto": "a",
+  "interessesUser": [
+    "Games",
+    "Esportes",
+    "Futebol",
+    "Games"
+  ]
+}
+;
+{
   "Nome": "Gabriel",
   "Descricao": "Gosto muito de jogar",
   "Celular": "99999",
@@ -67,6 +85,42 @@
     "Drinks",
     "Viajar",
     "Dan\u00E7ar"
+  ]
+}
+;
+{
+  "Nome": "Benguinha",
+  "Descricao": "hola amigos",
+  "Celular": "99999",
+  "Cep": "29167025",
+  "Senha": "234",
+  "DataNasc": "10 02 2001",
+  "Verificado": true,
+  "Rg": "123",
+  "Foto": "s",
+  "interessesUser": [
+    "Games",
+    "Games",
+    "Games",
+    "Games"
+  ]
+}
+;
+{
+  "Nome": "penis",
+  "Descricao": "piru",
+  "Celular": "99999",
+  "Cep": "29167019",
+  "Senha": "132",
+  "DataNasc": "02 02 2002",
+  "Verificado": true,
+  "Rg": "123",
+  "Foto": "s",
+  "interessesUser": [
+    "Games",
+    "Filme",
+    "Esportes",
+    "Drinks"
   ]
 }
 ;

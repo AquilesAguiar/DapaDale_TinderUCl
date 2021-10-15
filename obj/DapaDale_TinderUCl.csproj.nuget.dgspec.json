@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aquil\\OneDrive\\Documentos\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj": {}
+    "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aquil\\OneDrive\\Documentos\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj": {
+    "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aquil\\OneDrive\\Documentos\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj",
+        "projectUniqueName": "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj",
         "projectName": "DapaDale_TinderUCl",
-        "projectPath": "C:\\Users\\aquil\\OneDrive\\Documentos\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj",
-        "packagesPath": "C:\\Users\\aquil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aquil\\OneDrive\\Documentos\\GitHub\\DapaDale_TinderUCl\\obj\\",
+        "projectPath": "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\DapaDale_TinderUCl.csproj",
+        "packagesPath": "C:\\Users\\bielp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bielp\\Documents\\GitHub\\DapaDale_TinderUCl\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aquil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bielp\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

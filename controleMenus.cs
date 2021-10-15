@@ -8,6 +8,7 @@ namespace DapaDale_TinderUCl
     public class controleMenus
     {
         public static void bemVindo(){
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine(@"___________________________________________________________________________________________________________________________________________
 
                                             Tinder UCL <3
@@ -17,6 +18,7 @@ ________________________________________________________________________________
                      2 - Logar com usuario  
                      3 - Sair  
             ");
+            Console.ForegroundColor = ConsoleColor.White;
         }
     
         public static void comandos(string Usu, string Senha,List<Usuario> Usuarios){
@@ -36,18 +38,21 @@ ________________________________________________________________________________
 
                 switch(sentinela){
                     case "1":
-                        Console.WriteLine("Teste");
                         darLikes(Usu,Senha,Usuarios);
                         break;
                     case "2":
+                        Console.Clear();
                         verPerfil(Usu,Senha,Usuarios);
                         break;
                     case "3":
+                        Console.Clear();
                         verInteresses(Usu,Senha,Usuarios);
                         break;
                     case "4":
                         //Sair 
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Saindo....");
+                        Console.ForegroundColor = ConsoleColor.White;
                         Console.ReadKey();
                         Console.Clear();
                         Environment.Exit(0);
@@ -55,7 +60,9 @@ ________________________________________________________________________________
                     
                     default:
                         //Comando Inválido
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Comando Inválido");
+                        Console.ForegroundColor = ConsoleColor.White;
                         Console.ReadKey();
                         Console.Clear();
                         break;
@@ -69,13 +76,15 @@ ________________________________________________________________________________
                 if (user.Nome == Usu && user.Senha == Senha)
                 {   
                     Console.WriteLine(@$"___________________________________________________________________________________________________________________________________________
-                                Foto:{user.Foto}
+                                    SEU PERFIL
+                                Foto:{(user.Foto == "" ? "Não Possui Foto" : user.Foto)}
                                 Nome:{user.Nome}
                                 Descriçao:{user.Descricao}
                                 Data de Nascimento:{user.DataNasc}
                                 Rua:{user.Endereco.logradouro}
                                 Bairro:{user.Endereco.bairro}
                                 Estado:{user.Endereco.uf}
+                                Verificado:{(user.Verificado == true ? "Sim" : "Nao")}
 ___________________________________________________________________________________________________________________________________________");
                     Console.ReadKey();
                     Console.Clear();
@@ -90,6 +99,7 @@ ________________________________________________________________________________
                 if (user.Nome == Usu && user.Senha == Senha)
                 {   
                     Console.WriteLine(@$"___________________________________________________________________________________________________________________________________________
+                                        SEUS INTERESSES
                                 1 - {user.interessesUser[0]}
                                 2 - {user.interessesUser[1]}
                                 3 - {user.interessesUser[2]}
@@ -183,16 +193,18 @@ ________________________________________________________________________________
         public static void darLikes(string Usu, string Senha,List<Usuario> Usuarios){
             Dictionary<Usuario, double> recomendacoes = calcRecomendacao(Usu,Senha,Usuarios);
             foreach( KeyValuePair<Usuario, double> kvp in recomendacoes){
+                // Console.ReadLine();
                 Console.Clear();
                 Console.WriteLine(@$"___________________________________________________________________________________________________________________________________________
                                 Perfil
-                        Foto:{kvp.Key.Foto}
+                        Foto:{(kvp.Key.Foto == "" ? "Não Possui Foto" : kvp.Key.Foto)}
                         Nome:{kvp.Key.Nome}
                         Descriçao:{kvp.Key.Descricao}
                         Data de Nascimento:{kvp.Key.DataNasc}
                         Rua:{kvp.Key.Endereco.logradouro}
                         Bairro:{kvp.Key.Endereco.bairro}
                         Estado:{kvp.Key.Endereco.uf}
+                        Verificado:{(kvp.Key.Verificado == true ? "Sim" : "Nao")}
 ___________________________________________________________________________________________________________________________________________
                                 Interessses
                         1 - {kvp.Key.interessesUser[0]}
@@ -204,13 +216,21 @@ ________________________________________________________________________________
 
                 Console.WriteLine("Dislike(Pressione A) || Like(Pressione D)");
                 ConsoleKeyInfo situacao = Console.ReadKey();
+                Console.WriteLine("\n");
                 if(situacao.KeyChar == 'd'){
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Gostou!");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ReadLine();
                 }else if( situacao.KeyChar == 'a'){
-                    Console.WriteLine("Não Gostou!");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Nao Gostou!");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ReadLine();
                 }
                 
             }
+            Console.Clear();
         }
         
         

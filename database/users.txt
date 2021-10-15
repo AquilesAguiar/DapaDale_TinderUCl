@@ -70,3 +70,21 @@
   ]
 }
 ;
+{
+  "Nome": "OK",
+  "Descricao": "",
+  "Celular": "",
+  "Cep": "29167019",
+  "Senha": "123",
+  "DataNasc": "05/10/2001",
+  "Verificado": false,
+  "Rg": "",
+  "Foto": "",
+  "interessesUser": [
+    "Filme",
+    "Esportes",
+    "Desenhos",
+    "Lives"
+  ]
+}
+;

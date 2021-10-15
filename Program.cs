@@ -21,11 +21,23 @@ namespace DapaDale_TinderUCl
                         Console.Write("Nome >> ");
                         string nome = Console.ReadLine();
 
+                        while(nome == ""){
+                            Console.WriteLine("O campo nome deve ser preenchido.");
+                            Console.Write("Nome >> ");
+                            nome = Console.ReadLine();
+                        }
+
                         Console.Write("Descrição >> ");
                         string descricao = Console.ReadLine();
 
                         Console.Write("Data de Nascimento >> ");
                         string dataNas = Console.ReadLine();
+
+                        while(dataNas == ""){
+                            Console.WriteLine("O campo Data de Nascimento deve ser preenchido.");
+                            Console.Write("Data de Nascimento >> ");
+                            dataNas = Console.ReadLine();
+                        }
 
                         Console.Write("Celular >> ");
                         string cel = Console.ReadLine();
@@ -33,8 +45,20 @@ namespace DapaDale_TinderUCl
                         Console.Write("Cep >> ");
                         string cep = Console.ReadLine();
 
+                        while(cep == ""){
+                            Console.WriteLine("O campo Cep deve ser preenchido.");
+                            Console.Write("Cep >> ");
+                            cep = Console.ReadLine();
+                        }
+
                         Console.Write("Senha >> ");
                         string senha = Console.ReadLine();
+
+                        while(senha == ""){
+                            Console.WriteLine("O campo Senha deve ser preenchido.");
+                            Console.Write("Senha >> ");
+                            senha = Console.ReadLine();
+                        }
 
                         Console.Write("Rg >> ");
                         string rg = Console.ReadLine();
@@ -64,13 +88,17 @@ namespace DapaDale_TinderUCl
                             }
                             finally
                             {
+                                Console.ForegroundColor = ConsoleColor.DarkMagenta;
                                 Console.WriteLine("Usuario Criado!!");
+                                Console.ForegroundColor = ConsoleColor.White;
                                 Console.ReadKey();
                                 Console.Clear();
                             }
                             break;
                         }
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Usuario menor de 18 anos !!");
+                        Console.ForegroundColor = ConsoleColor.White;
                         Console.ReadKey();
                         Console.Clear();
                         break;
@@ -85,7 +113,9 @@ namespace DapaDale_TinderUCl
                         string password = Console.ReadLine();
                         List<Usuario> usuariosBanco = controleUsers.deserializar();
                         if(controleUsers.Logar(usu,password,usuariosBanco)){
+                            Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("Entrou!");
+                            Console.ForegroundColor = ConsoleColor.White;
                             Console.ReadKey();
                             Console.Clear();
                             controleMenus.comandos(usu,password,usuariosBanco);
@@ -93,7 +123,9 @@ namespace DapaDale_TinderUCl
                         break;
                     case "3":
                         //Sair
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Saindo....");
+                        Console.ForegroundColor = ConsoleColor.White;
                         Console.ReadKey();
                         Console.Clear();
                         Environment.Exit(0);
@@ -103,7 +135,9 @@ namespace DapaDale_TinderUCl
                     
                     default:
                         //Comando Inválido 
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Comando Inválido");
+                        Console.ForegroundColor = ConsoleColor.White;
                         Console.ReadKey();
                         Console.Clear();
                         break;

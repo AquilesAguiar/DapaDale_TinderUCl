@@ -59,10 +59,12 @@ namespace DapaDale_TinderUCl
                 // Rg
                 case 5:
                     Rg = valor;
+                    isVerificado();
                     return true;    
                 //Foto    
                 case 6:
                     Foto = valor;
+                    isVerificado();
                     return true;
                 //Descricao    
                 case 7:
